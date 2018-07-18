@@ -22,4 +22,5 @@ public class UserService {
     public User selectByPrimaryKey(Integer id){
         return userMapper.selectByPrimaryKey(id);
     }
+
 }

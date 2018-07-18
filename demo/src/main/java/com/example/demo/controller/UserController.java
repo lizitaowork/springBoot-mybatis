@@ -1,4 +1,4 @@
-package com.example.demo.dao.controller;
+package com.example.demo.controller;
 
 import com.example.demo.service.UserService;
 import org.springframework.stereotype.Controller;
