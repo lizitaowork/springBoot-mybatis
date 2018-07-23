@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * Created by zitao.li on 2018/7/18.
@@ -13,8 +14,9 @@ public class IndexController {
         return "index";
     }
 
-    @RequestMapping("test")
+    @RequestMapping("/test")
+    @ResponseBody
     public String toTest(){
-        return "index";
+        return "test";
     }
 }
