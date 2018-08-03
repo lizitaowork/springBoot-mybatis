@@ -10,7 +10,7 @@ import javax.annotation.Resource;
  * Created by zitao.li on 2018/7/17.
  */
 @Controller
-@RequestMapping("user")
+@RequestMapping("/users")
 public class UserController {
     @Resource
     private UserService userService;
@@ -21,9 +21,9 @@ public class UserController {
         return userService.selectAll();
     }
 
-    @RequestMapping(value = "/select/id", method = RequestMethod.GET)
+    @RequestMapping(value = "/select/{id}", method = RequestMethod.GET)
     @ResponseBody
-    public Object selectByPrimaryKey(@RequestParam("id") Integer id){
+    public Object selectByPrimaryKey(@PathVariable("id") Integer id){
         return userService.selectByPrimaryKey(id);
     }
 }
